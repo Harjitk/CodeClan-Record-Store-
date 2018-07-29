@@ -8,8 +8,6 @@ var RecordStore = function(name, city) {
 };
 
 
-module.exports = RecordStore;
-
 RecordStore.prototype.addRecord = function(record){
   this.inventory.push(record);
 };
@@ -29,14 +27,15 @@ RecordStore.prototype.sellRecord = function(record){
 // this.inventory_.indexOf(record)
 // _.indexOf(array, value, [fromIndex=0])
 
+// RecordStore.prototype.finanicalReport = function(){
+//     return this.balance;
+//     return this.inventory;
+//   };
 
 
+RecordStore.prototype.viewByGenre = function(genre){
+return _.filter(this.inventory, item => item.genre == genre);
+};
 
-RecordStore.prototype.finanicalSituation = function(){
-
-
-// this get .sumBy method to array of inventory
-// then do hashmap on the total balance with the total of the inventory
-}
 
 module.exports = RecordStore;
